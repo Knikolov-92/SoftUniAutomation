@@ -59,19 +59,8 @@ namespace AutomationPractice.Utils
         }
 
         public string GenerateRandomPhoneNumber()
-        {
-            var chars = "0123456789";
-            var stringChars = new char[SignUpPage.PHONE_MAX_LENGTH];
-            var random = new Random();
-
-            for (int i = 0; i < stringChars.Length; i++)
-            {
-                stringChars[i] = chars[random.Next(chars.Length)];
-            }
-
-            var number = new String(stringChars);
-
-            return number;
+        {          
+            return GenerateRandomStringNumber(SignUpPage.PHONE_MAX_LENGTH);
         }
 
         
