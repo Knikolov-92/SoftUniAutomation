@@ -1,8 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace SeleniumBasic.Pages.GooglePage
 {
@@ -15,13 +13,23 @@ namespace SeleniumBasic.Pages.GooglePage
 
         }
 
-        public void SubmitsGoogleSearch(string text)
+        public void Open()
+        {
+            NavigateTo(GOOGLE_HOME_PAGE_URL);
+        }
+
+        public void SubmitGoogleSearch(string text)
         {
             Actions actions = new Actions(Driver);
+
             FillFieldWithText(SEARCH_INPUT_FIELD, text);
             actions.SendKeys(Keys.Enter);
             actions.Perform();
+        }
 
+        public void ClickOnFirstResultLink()
+        {
+            ClickOn(FIRST_SEARCH_RESULT);
         }
     }
 }

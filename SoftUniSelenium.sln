@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomationPractice", "Autom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoQA", "DemoQA\DemoQA.csproj", "{4ED35C33-50E5-46FF-A203-E891532D6CBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumBasic", "SeleniumBasic\SeleniumBasic.csproj", "{4B77F5CE-5C74-4735-B543-920D781C8813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumBasic", "SeleniumBasic\SeleniumBasic.csproj", "{4B77F5CE-5C74-4735-B543-920D781C8813}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
