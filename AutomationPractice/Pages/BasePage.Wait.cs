@@ -3,51 +3,15 @@ using OpenQA.Selenium.Support.UI;
 using System;
 
 
-namespace SeleniumBasic.Pages
+namespace AutomationPractice.Pages
 {
-    public class BasePage
-    {        
-        public static readonly double _maxWaitTime = 10000d;
-        public static readonly double _pollInterval = 500d;
-
-        protected IWebDriver Driver { get; }
-
-        public BasePage(IWebDriver driver)
-        {
-            Driver = driver;
-        }  
-
-        public void NavigateTo(string targetURL)
-        {
-            Driver.Navigate().GoToUrl(targetURL);
-        }
-
-        public void ClickOn(By elementLocator)
-        {
-            WaitForElementToBeDisplayed(elementLocator);
-            Driver.FindElement(elementLocator).Click();
-        }
-
-        public void FillFieldWithText(By textFieldLocator, string text)
-        {
-            Driver.FindElement(textFieldLocator).SendKeys(text);
-        }
-
-        public string GetElementText(By elementLocator)
-        {
-            return Driver.FindElement(elementLocator).Text;
-        }
-
-        public string GetElementValue(By elementLocator)
-        {
-            return Driver.FindElement(elementLocator).GetAttribute("value");
-        }
-
+    public partial class BasePage
+    {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0017:Simplify object initialization", Justification = "<Pending>")]
         public void WaitForElementToBeDisplayed(By elementLocator)
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(_maxWaitTime));
-            wait.PollingInterval = TimeSpan.FromMilliseconds(_pollInterval);            
+            wait.PollingInterval = TimeSpan.FromMilliseconds(_pollInterval);
             //wait.IgnoreExceptionTypes(typeof(NoSuchElementException), typeof(StaleElementReferenceException));
             wait.Message = "Element not found";
 
@@ -118,5 +82,14 @@ namespace SeleniumBasic.Pages
             });
         }
 
+        public void WaitForElementToBePresent(By elementLocator)
+        {
+            var wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(_maxWaitTime));
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+            wait.Until(ExpectedConditions.ElementExists(elementLocator));
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
     }
 }

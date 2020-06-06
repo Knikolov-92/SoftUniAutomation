@@ -3,8 +3,8 @@ using OpenQA.Selenium.Chrome;
 using System.IO;
 using System.Reflection;
 
-namespace SeleniumBasic.Tests
-{    
+namespace AutomationPractice.Tests
+{
     public class BaseTest
     {
         protected IWebDriver Driver { get; set; }
