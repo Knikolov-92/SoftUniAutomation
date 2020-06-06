@@ -93,5 +93,5 @@ C:\Users\Red_Deveel\source\repos\SoftUniSelenium\SeleniumBasic\obj\Debug\netcore
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\SeleniumBasic\obj\Debug\netcoreapp3.1\SeleniumBasic.pdb
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\SeleniumBasic\obj\Debug\netcoreapp3.1\SeleniumBasic.genruntimeconfig.cache
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\SeleniumBasic\bin\Debug\netcoreapp3.1\WebDriver.dll
-C:\Users\Red_Deveel\source\repos\SoftUniSelenium\SeleniumBasic\obj\Debug\netcoreapp3.1\SeleniumBasic.csprojAssemblyReference.cache
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\SeleniumBasic\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
+C:\Users\Red_Deveel\source\repos\SoftUniSelenium\SeleniumBasic\obj\Debug\netcoreapp3.1\SeleniumBasic.csproj.CoreCompileInputs.cache

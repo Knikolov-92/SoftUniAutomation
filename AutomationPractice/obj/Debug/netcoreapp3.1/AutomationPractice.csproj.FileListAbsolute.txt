@@ -188,6 +188,6 @@ C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\obj\Debug\ne
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\obj\Debug\netcoreapp3.1\AutomationPractice.dll
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\obj\Debug\netcoreapp3.1\AutomationPractice.pdb
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\obj\Debug\netcoreapp3.1\AutomationPractice.genruntimeconfig.cache
-C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\obj\Debug\netcoreapp3.1\AutomationPractice.csprojAssemblyReference.cache
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\bin\Debug\netcoreapp3.1\WebDriver.dll
 C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
+C:\Users\Red_Deveel\source\repos\SoftUniSelenium\AutomationPractice\obj\Debug\netcoreapp3.1\AutomationPractice.csproj.CoreCompileInputs.cache
