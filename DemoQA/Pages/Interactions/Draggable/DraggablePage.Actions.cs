@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-
+﻿
 
 namespace DemoQA.Pages.Interactions
 {

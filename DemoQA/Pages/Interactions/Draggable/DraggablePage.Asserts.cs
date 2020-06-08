@@ -13,14 +13,11 @@ namespace DemoQA.Pages.Interactions
             int expectedX = expectedPosition[0];
             int expectedY = expectedPosition[1];            
             int actualX;
-            int actualY;
-            List<int> actualDragElementPosition = new List<int>();
+            int actualY;           
 
             WaitForDragMeElementToBeClickable();
             actualX = GetDragMeElementPositionX();
-            actualY = GetDragMeElementPositionY();
-            actualDragElementPosition.Add(actualX);
-            actualDragElementPosition.Add(actualY);
+            actualY = GetDragMeElementPositionY();           
 
             Assert.Multiple(() =>
             {
@@ -34,14 +31,11 @@ namespace DemoQA.Pages.Interactions
             int expectedX = expectedPosition[0];
             int expectedY = expectedPosition[1];
             int actualX;
-            int actualY;
-            List<int> actualDragElementPosition = new List<int>();
+            int actualY;            
 
             WaitForOnlyXelementToBeClickable();
             actualX = GetCoordinateXofOnlyXelement();
-            actualY = GetCoordinateYofOnlyXelement();
-            actualDragElementPosition.Add(actualX);
-            actualDragElementPosition.Add(actualY);
+            actualY = GetCoordinateYofOnlyXelement();           
 
             Assert.Multiple(() =>
             {
@@ -56,13 +50,10 @@ namespace DemoQA.Pages.Interactions
             int expectedY = expectedPosition[1];
             int actualX;
             int actualY;
-            List<int> actualDragElementPosition = new List<int>();
-
+           
             WaitForOnlyYelementToBeClickable();
             actualX = GetCoordinateXofOnlyYelement();
             actualY = GetCoordinateYofOnlyYelement();
-            actualDragElementPosition.Add(actualX);
-            actualDragElementPosition.Add(actualY);
 
             Assert.Multiple(() =>
             {
