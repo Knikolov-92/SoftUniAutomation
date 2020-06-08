@@ -1,6 +1,5 @@
 ﻿using AutomationPractice.Pages.SignUp;
 using OpenQA.Selenium;
-using System;
 
 
 namespace AutomationPractice.Pages.SignIn
@@ -19,9 +18,8 @@ namespace AutomationPractice.Pages.SignIn
 
         public void SubmitEmailAndProceedToSingUpPage()
         {
-            Random generator = new Random();
-
-            int randomNumber = generator.Next(1000, 9999);
+            int randomNumberLen = 5;
+            string randomNumber = Generator.GenerateRandomStringNumber(randomNumberLen);
             string email = "test" + randomNumber + "@example.com";
 
             WaitForElementToBeDisplayed(EMAIL_FIELD_INPUT);

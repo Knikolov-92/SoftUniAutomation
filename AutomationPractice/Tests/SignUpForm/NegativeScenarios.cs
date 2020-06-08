@@ -36,9 +36,8 @@ namespace AutomationPractice.Tests.SignUpForm
         public void CorrectErrorMessageIsDisplayed_When_RegisteringWithInvalidFirstName()
         {
             //----------Arrange----------
-            string invalidFirstName = _generator.GenerateRandomStringName(SignUpPage.NAME_MIN_LENGTH)
+            _user.FirstName = _generator.GenerateRandomStringName(SignUpPage.NAME_MIN_LENGTH)
                                     + _generator.GenerateRandomStringNumber(1);
-            _user.FirstName = invalidFirstName;
             List<Enum> expectedError = new List<Enum>
             {
                 SignUpPage.Errors.invalidFirstName
@@ -77,7 +76,6 @@ namespace AutomationPractice.Tests.SignUpForm
         {
             //----------Arrange----------
             _user.PhoneNumber = _generator.GenerateRandomStringName(SignUpPage.PHONE_MIN_LENGTH);
-
             List<Enum> expectedError = new List<Enum>
             {
                 SignUpPage.Errors.invalidPhone
@@ -97,7 +95,6 @@ namespace AutomationPractice.Tests.SignUpForm
         {
             //----------Arrange----------
             _user.PostalCode = _generator.GenerateRandomStringNumber(SignUpPage.POSTAL_CODE_LENGTH - 1);
-
             List<Enum> expectedError = new List<Enum>
             {
                 SignUpPage.Errors.invalidPostalCode
@@ -192,7 +189,6 @@ namespace AutomationPractice.Tests.SignUpForm
         {
             //----------Arrange----------
             int randomNumber = new Random().Next(1, SignUpPage.PASSWORD_MIN_LENGTH - 1);
-
             _user.FirstName = _generator.GenerateRandomStringName(SignUpPage.NAME_MIN_LENGTH)
                                     + _generator.GenerateRandomStringNumber(1);
             _user.Password = _generator.GenerateRandomString(SignUpPage.PASSWORD_MIN_LENGTH - randomNumber);

@@ -10,10 +10,7 @@ using System.Reflection;
 namespace AutomationPractice.Pages
 {
     public partial class BasePage
-    {
-        public static readonly double _maxWaitTime = 10000d;
-        public static readonly double _pollInterval = 500d;
-
+    {      
         protected IWebDriver Driver { get; }
         protected DataGenerator Generator { get; }
 
