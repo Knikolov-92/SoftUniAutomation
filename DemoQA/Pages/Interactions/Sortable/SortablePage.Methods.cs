@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
+using System.Linq;
+
 
 namespace DemoQA.Pages.Interactions.Sortable
 {
@@ -46,10 +46,10 @@ namespace DemoQA.Pages.Interactions.Sortable
 
         public List<string> GetActualOrderOfSortedListElements()
         {
-            ReadOnlyCollection<IWebElement> sortedElements;
+            List<IWebElement> sortedElements;
             List<string> orderOfElements = new List<string>();
 
-            sortedElements = Driver.FindElements(LIST_ALL_ELEMENTS);
+            sortedElements = Driver.FindElements(LIST_ALL_ELEMENTS).ToList();
             foreach (IWebElement elem in sortedElements)
             {
                 orderOfElements.Add(elem.Text);
@@ -89,10 +89,10 @@ namespace DemoQA.Pages.Interactions.Sortable
 
         public List<string> GetActualOrderOfSortedGridElements()
         {
-            ReadOnlyCollection<IWebElement> sortedElements;
+            List<IWebElement> sortedElements;
             List<string> orderOfElements = new List<string>();
 
-            sortedElements = Driver.FindElements(GRID_ALL_ELEMENTS);
+            sortedElements = Driver.FindElements(GRID_ALL_ELEMENTS).ToList();
             foreach (IWebElement elem in sortedElements)
             {
                 orderOfElements.Add(elem.Text);

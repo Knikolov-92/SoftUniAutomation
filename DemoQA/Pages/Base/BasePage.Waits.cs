@@ -51,28 +51,19 @@ namespace DemoQA.Pages
         public void WaitForElementToBeClickable(By elementLocator)
         {
             var wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(_maxWaitTime));
-#pragma warning disable CS0618 // Type or member is obsolete
-
             wait.Until(ExpectedConditions.ElementToBeClickable(elementLocator));
-#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         public void WaitForElementToBeClickable(IWebElement element)
         {
             var wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(_maxWaitTime));
-#pragma warning disable CS0618 // Type or member is obsolete
-
             wait.Until(ExpectedConditions.ElementToBeClickable(element));
-#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         public void WaitForElementToBeVisible(By elementLocator)
         {
             var wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(_maxWaitTime));
-#pragma warning disable CS0618 // Type or member is obsolete
-
             wait.Until(ExpectedConditions.ElementIsVisible(elementLocator));
-#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }

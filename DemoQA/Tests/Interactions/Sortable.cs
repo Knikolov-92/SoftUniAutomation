@@ -30,7 +30,7 @@ namespace DemoQA.Tests.Interactions
             _sortPage.SortAllListElementsInDescendingOrder();           
 
             //Assert
-            _sortPage.ValidateOrderOfSortedElements(expectedElementsOrder);
+            _sortPage.ValidateOrderOfSortedListElements(expectedElementsOrder);
         }
 
         [Test]
@@ -45,10 +45,10 @@ namespace DemoQA.Tests.Interactions
             //Act
             _sortPage.NavigateToGridTab();
             _sortPage.WaitForGridElementsToBeDisplayed();
-            _sortPage.SortAllGridElementsInDescendingOrder();
+            _sortPage.SortAllGridElementsInDescendingOrder();            
 
             //Assert
-            _sortPage.ValidateOrderOfSortedElements(expectedElementsOrder);
+            _sortPage.ValidateOrderOfSortedGridElements(expectedElementsOrder);
         }
 
         [TearDown]

@@ -1,4 +1,8 @@
 ﻿
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
+
 namespace DemoQA.Pages.Interactions.Sortable
 {
     public partial class SortablePage : BasePage
@@ -12,6 +16,6 @@ namespace DemoQA.Pages.Interactions.Sortable
         public void WaitForGridElementsToBeDisplayed()
         {
             WaitForElementToBeDisplayed(GRID_NINTH_ELEMENT);
-        }
+        }        
     }
 }
