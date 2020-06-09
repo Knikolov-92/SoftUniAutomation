@@ -21,8 +21,14 @@ namespace DemoQA.Pages
 
         public void ClickOn(By elementLocator)
         {
-            WaitForElementToBeDisplayed(elementLocator);
+            WaitForElementToBeClickable(elementLocator);
             Driver.FindElement(elementLocator).Click();
+        }
+
+        public void ClickOn(IWebElement element)
+        {
+            WaitForElementToBeClickable(element);
+            element.Click();
         }
 
         public string GetElementBackgroundColor(By elementLocator)
@@ -33,17 +39,7 @@ namespace DemoQA.Pages
         public string GetElementBackgroundColor(IWebElement element)
         {
             return element.GetCssValue("background-color");
-        }
-
-        public string GetElementText(By elementLocator)
-        {
-            return Driver.FindElement(elementLocator).Text;
-        }
-
-        public string GetElementText(IWebElement element)
-        {
-            return element.Text;
-        }                
+        }              
 
         public int GetElementSizeWidth(By elementLocator)
         {

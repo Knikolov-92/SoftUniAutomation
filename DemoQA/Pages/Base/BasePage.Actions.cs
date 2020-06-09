@@ -20,6 +20,19 @@ namespace DemoQA.Pages
                    .Perform();
         }
 
+        public void DragAndDropElementWithOffset(By fromElement, By toElement, int offset)
+        {
+            Actions act = new Actions(Driver);
+            IWebElement dragElement = Driver.FindElement(fromElement);
+            IWebElement dropElement = Driver.FindElement(toElement);
+
+            act.MoveToElement(dragElement)
+                   .ClickAndHold(dragElement)
+                   .MoveToElement(dropElement, dropElement.Location.X, offset)
+                   .Release(dropElement)
+                   .Perform();
+        }
+
         public void DragAndDropElementWithOffsetFromCenter(By fromElement, By toElement, int offsetX, int offsetY)
         {
             IWebElement dragElement = Driver.FindElement(fromElement);

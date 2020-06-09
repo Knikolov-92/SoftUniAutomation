@@ -66,5 +66,13 @@ namespace DemoQA.Pages
 #pragma warning restore CS0618 // Type or member is obsolete
         }
 
+        public void WaitForElementToBeVisible(By elementLocator)
+        {
+            var wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(_maxWaitTime));
+#pragma warning disable CS0618 // Type or member is obsolete
+
+            wait.Until(ExpectedConditions.ElementIsVisible(elementLocator));
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
     }
 }
