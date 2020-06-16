@@ -13,12 +13,13 @@ namespace SeleniumBasic.Pages.SoftUni
         public void Open()
         {
             NavigateTo(SOFTUNI_HOME_PAGE_URL);
-        }
+        }       
 
-        public void NavigateToQAAutomationCoursePage()
+        public void NavigateToQAmodule()
         {
             ClickOn(NAV_BAR_COURSES_BUTTON);
-            ClickOn(QA_AUTOMATION_COURSE_LINK);
+            ClickOn(EXPAND_COURSE_MODULES_BUTTON);
+            ClickOn(QA_AUTOMATION_MODULE_LINK);
         }
     }
 }

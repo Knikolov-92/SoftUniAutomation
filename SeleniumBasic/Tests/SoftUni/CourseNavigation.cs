@@ -27,7 +27,7 @@ namespace SeleniumBasic.Tests.SoftUni
             string expectedCourseHeading = "QA Automation - май 2020";
 
             //Act
-            _homePage.NavigateToQAAutomationCoursePage();
+            _coursePage.NavigateToQAAutomationCoursePage();
 
             //Assert          
             _coursePage.AssertCorrectCoursePageIsLoaded(expectedPageTitle, expectedCourseHeading);            
