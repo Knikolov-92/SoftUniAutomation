@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 
@@ -28,10 +27,10 @@ namespace DemoQA.Pages.Interactions.Sortable
             int offsetY = LIST_ELEMENT_HEIGHT - LIST_ELEMENT_PADDING;
 
             //works on resolution 1920x1080, 24'' display
-            DragAndDropElementWithOffset(LIST_FIRST_ELEMENT, BOTTOM_END_OF_LIST, 0);
+            DragAndDropElementWithOffset(LIST_FIRST_ELEMENT, BOTTOM_END_OF_LIST, 0);            
             WaitForElementToBeVisible(LIST_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(LIST_FIRST_ELEMENT, LIST_SIXTH_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(LIST_FIRST_ELEMENT, LIST_SIXTH_ELEMENT, offsetY);           
             WaitForElementToBeVisible(LIST_FIRST_ELEMENT);
 
             DragAndDropElementWithOffset(LIST_FIRST_ELEMENT, LIST_FIFTH_ELEMENT, offsetY);
@@ -62,28 +61,28 @@ namespace DemoQA.Pages.Interactions.Sortable
             int offsetY = 0;
 
             //works on resolution 1920x1080, 24'' display
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, BOTTOM_END_OF_LIST, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, BOTTOM_END_OF_LIST, offsetY);            
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_NINTH_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_NINTH_ELEMENT, offsetY);           
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_EIGHTH_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_EIGHTH_ELEMENT, offsetY);           
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_SEVENTH_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_SEVENTH_ELEMENT, offsetY);           
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_SIXTH_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_SIXTH_ELEMENT, offsetY);            
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_FIFTH_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_FIFTH_ELEMENT, offsetY);           
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_FOURTH_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_FOURTH_ELEMENT, offsetY);            
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);
 
-            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_THIRD_ELEMENT, offsetY);
+            DragAndDropElementWithOffset(GRID_FIRST_ELEMENT, GRID_THIRD_ELEMENT, offsetY);            
             WaitForElementToBeVisible(GRID_FIRST_ELEMENT);            
         }
 

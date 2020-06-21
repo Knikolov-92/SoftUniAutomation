@@ -10,10 +10,9 @@ namespace AutomationPractice.Pages.SignUp
     {
         public SignUpPage(IWebDriver driver)
             : base(driver)
-        {
-        }        
+        { }        
 
-        public void EnterAccountData(SignUpModel user)
+        public void EnterValidAccountData(SignUpModel user)
         {
             string country = "United States";
             string state = GetRandomUnitedStateFromEnum();

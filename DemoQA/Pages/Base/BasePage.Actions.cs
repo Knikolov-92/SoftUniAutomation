@@ -22,11 +22,11 @@ namespace DemoQA.Pages
 
         public void DragAndDropElementWithOffset(By fromElement, By toElement, int offset)
         {
-            Actions act = new Actions(Driver);
+            Actions actions = new Actions(Driver);
             IWebElement dragElement = Driver.FindElement(fromElement);
             IWebElement dropElement = Driver.FindElement(toElement);
 
-            act.MoveToElement(dragElement)
+            actions.MoveToElement(dragElement)
                    .ClickAndHold(dragElement)
                    .MoveToElement(dropElement, dropElement.Location.X, offset)
                    .Release(dropElement)
@@ -36,7 +36,7 @@ namespace DemoQA.Pages
         public void DragAndDropElementWithOffsetFromCenter(By fromElement, By toElement, int offsetX, int offsetY)
         {
             IWebElement dragElement = Driver.FindElement(fromElement);
-            IWebElement dropElement = Driver.FindElement(toElement);
+            IWebElement dropElement = Driver.FindElement(toElement);           
 
             Actions.MoveToElement(dragElement)
                    .ClickAndHold(dragElement)
@@ -49,7 +49,7 @@ namespace DemoQA.Pages
         public void DragAndDropElementWithOffsetFromTopLeft(By fromElement, By toElement, int оffsetX, int оffsetY)
         {
             IWebElement dragElement = Driver.FindElement(fromElement);
-            IWebElement dropElement = Driver.FindElement(toElement);
+            IWebElement dropElement = Driver.FindElement(toElement);            
 
             Actions.MoveToElement(dragElement)
                    .ClickAndHold(dragElement)
