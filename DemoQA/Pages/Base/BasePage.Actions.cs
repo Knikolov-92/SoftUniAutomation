@@ -46,14 +46,14 @@ namespace DemoQA.Pages
                    .Perform();
         }
 
-        public void DragAndDropElementWithOffsetFromTopLeft(By fromElement, By toElement, int dropOffsetX, int dropOffsetY)
+        public void DragAndDropElementWithOffsetFromTopLeft(By fromElement, By toElement, int оffsetX, int оffsetY)
         {
             IWebElement dragElement = Driver.FindElement(fromElement);
             IWebElement dropElement = Driver.FindElement(toElement);
 
             Actions.MoveToElement(dragElement)
                    .ClickAndHold(dragElement)
-                   .MoveToElement(dropElement, dropOffsetX, dropOffsetY, MoveToElementOffsetOrigin.TopLeft)
+                   .MoveToElement(dropElement, оffsetX, оffsetY, MoveToElementOffsetOrigin.TopLeft)
                    .Release()
                    .Build()
                    .Perform();

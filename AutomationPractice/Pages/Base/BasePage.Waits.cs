@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 using System;
 
 
@@ -89,11 +90,7 @@ namespace AutomationPractice.Pages
         public void WaitForElementToBePresent(By elementLocator)
         {
             var wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(_maxWaitTime));
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
             wait.Until(ExpectedConditions.ElementExists(elementLocator));
-#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }

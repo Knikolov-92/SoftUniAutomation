@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-
+using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace DemoQA.Pages
 {
@@ -46,7 +46,7 @@ namespace DemoQA.Pages
                     }
                 }
             });
-        }       
+        }
 
         public void WaitForElementToBeClickable(By elementLocator)
         {
