@@ -13,7 +13,7 @@ namespace AutomationPractice.Pages.SignUp
         {
         }        
 
-        public void EnterValidAccountData(SignUpModel user)
+        public void EnterAccountData(SignUpModel user)
         {
             string country = "United States";
             string state = GetRandomUnitedStateFromEnum();
