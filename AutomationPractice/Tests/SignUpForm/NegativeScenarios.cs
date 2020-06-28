@@ -45,7 +45,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();
 
             //----------Assert----------
@@ -64,7 +64,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();
 
             //----------Assert----------
@@ -83,7 +83,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();
 
             //----------Assert----------
@@ -102,7 +102,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();           
 
             //----------Assert----------
@@ -121,7 +121,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();
 
             //----------Assert----------
@@ -140,7 +140,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();
 
             //----------Assert----------
@@ -158,7 +158,7 @@ namespace AutomationPractice.Tests.SignUpForm
             };
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();
 
             //----------Assert----------
@@ -176,7 +176,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessage = _signUpPage.GetExpectedErrorMessages(expectedError)[0];
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.EnterEmptyState();
             _signUpPage.SubmitAccountData();
 
@@ -200,7 +200,7 @@ namespace AutomationPractice.Tests.SignUpForm
             _expectedErrorMessages = _signUpPage.GetExpectedErrorMessages(expectedErrors);
 
             //----------Act----------
-            _signUpPage.EnterValidAccountData(_user);
+            _signUpPage.EnterAccountData(_user);
             _signUpPage.SubmitAccountData();
 
             //----------Assert----------
