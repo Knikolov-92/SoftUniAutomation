@@ -13,5 +13,7 @@ namespace RestAPI.Utils
         public const string HOUSEHOLDS_ENDPOINT = "households";
         public const string USERS_ENDPOINT = "users";
         public const string WISHLISTS_ENDPOINT = "wishlists";
+        public const string ADD_BOOK_TO_WISHLIST_ENDPOINT = "wishlists/{wishlistId}/books/{bookId}";
+        public const string HOUSEHOLD_WISHLIST_ENDPOINT = "households/{householdId}/wishlistBooks";
     }
 }

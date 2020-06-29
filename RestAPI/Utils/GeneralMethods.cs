@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-
+using System.Collections.Generic;
 
 namespace RestAPI.Utils
 {
@@ -8,16 +8,31 @@ namespace RestAPI.Utils
         public GeneralMethods()
         { }
 
-        public string GetJSONstringValue(JObject jObject, string jsonKey)
+        public string GetJSONstringValue(JObject jsonObject, string jsonKey)
         {
-            return jObject.GetValue(jsonKey).ToString();
+            return jsonObject.GetValue(jsonKey).ToString();
         }
 
-        public int GetJSONintValue(JObject jObject, string jsonKey)
+        public int GetJSONintValue(JObject jsonObject, string jsonKey)
         {
-            var jsonVal = jObject.GetValue(jsonKey).ToString();
+            var jsonVal = jsonObject.GetValue(jsonKey).ToString();
 
             return int.Parse(jsonVal);
+        }
+
+        public int GetWishlistIdFromUser(JObject jsonObject)
+        {
+            return GetJSONintValue(jsonObject, "wishlistId");
+        }
+
+        public int GetIdFromResponse(JObject jsonObject)
+        {
+            return GetJSONintValue(jsonObject, "id");
+        }
+
+        public JObject GetJsonObjectFromJarray(JArray jsonArray, int index)
+        {
+            return jsonArray[index].ToObject<JObject>();
         }
     }
 }
