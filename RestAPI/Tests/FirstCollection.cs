@@ -80,7 +80,9 @@ namespace RestAPI.Tests
             _post.AddBookToUserWishlist(mimi.WishlistID, goodBook.Id);
 
             //get wishlist of household
-            var householdWishlist = _get.GetHouseholdWishlist(householdId);            
+            var householdWishlist = _get.GetHouseholdWishlist(householdId);
+            
+            //assign book IDs to class variables to delete at TearDown()
             _badBookId = badBook.Id;
             _averageBookId = averageBook.Id;
             _goodBookId = goodBook.Id;
