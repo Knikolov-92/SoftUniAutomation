@@ -10,6 +10,7 @@ namespace RestAPI.Utils
         public const string AUTHORIZATION_NAME = "admin";
         public const string AUTHORIZATION_PASSWORD = "admin";
         public const string BOOKS_ENDPOINT = "books";
+        public const string DELETE_BOOK_ENDPOINT = "books/{bookId}";
         public const string HOUSEHOLDS_ENDPOINT = "households";
         public const string USERS_ENDPOINT = "users";
         public const string WISHLISTS_ENDPOINT = "wishlists";

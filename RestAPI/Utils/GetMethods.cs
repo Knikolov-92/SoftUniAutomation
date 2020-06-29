@@ -13,7 +13,7 @@ namespace RestAPI.Utils
             _client = client;
         }
 
-        public JArray GetWishlistOfHousehold(int householdId)
+        public JArray GetHouseholdWishlist(int householdId)
         {
             var request = new RestRequest(Constants.HOUSEHOLD_WISHLIST_ENDPOINT, Method.GET);
             request.AddUrlSegment("householdId", householdId);

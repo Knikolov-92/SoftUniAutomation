@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
+using NUnit.Framework;
+using RestAPI.Models;
+using System;
 
 namespace RestAPI.Utils
 {
@@ -33,6 +35,38 @@ namespace RestAPI.Utils
         public JObject GetJsonObjectFromJarray(JArray jsonArray, int index)
         {
             return jsonArray[index].ToObject<JObject>();
+        }
+
+
+        public void AssertBookIsContainedInHouseholdWishlist(Book book, JArray wishlistArray, int position)
+        {
+            var bookOnWishlist = GetJsonObjectFromJarray(wishlistArray, position);
+            string expectedTitle = book.Title;
+            string expectedAuthor = book.Author;
+            string expectedISBN = book.Isbn;
+            string actualTitle = GetJSONstringValue(bookOnWishlist, "title");
+            string actualAuthor = GetJSONstringValue(bookOnWishlist, "author");
+            string actualISBN = GetJSONstringValue(bookOnWishlist, "isbn");
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(actualTitle, Is.EqualTo(expectedTitle));
+                Assert.That(actualAuthor, Is.EqualTo(expectedAuthor));
+                Assert.That(actualISBN, Is.EqualTo(expectedISBN));
+            });
+        }
+
+        public bool AssertHoseholdWishlistHasCorrectSize(JArray wishlistArray)
+        {
+            Console.WriteLine(wishlistArray.Count);
+            if (wishlistArray.Count == 0 || wishlistArray.Count < 3 || wishlistArray.Count > 3)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }            
         }
     }
 }
